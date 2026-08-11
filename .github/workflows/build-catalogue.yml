@@ -1,0 +1,32 @@
+name: Régénérer le catalogue
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'parcours/**/*.json'
+
+permissions:
+  contents: write
+
+jobs:
+  build-catalogue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Régénérer catalogue.json
+        run: node scripts/build-catalogue.js
+
+      - name: Committer si le catalogue a changé
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add catalogue.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: régénération automatique du catalogue"
+            git push
+          else
+            echo "catalogue.json inchangé — rien à committer."
+          fi
