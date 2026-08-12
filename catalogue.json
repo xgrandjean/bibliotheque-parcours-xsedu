@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-08-12T06:13:17.984Z",
+  "count": 1,
+  "parcours": [
+    {
+      "slug": "exemple-de-parcours-2a7141ec",
+      "designation": "Exemple de parcours",
+      "matieres": [
+        "NSI",
+        "Maths"
+      ],
+      "niveauxClasse": [
+        "Terminale"
+      ],
+      "theme": "Exemple",
+      "observation": "Exemple de formulaire avec tous les types de questions",
+      "nbChapitres": 1,
+      "nbQuestions": 14,
+      "contributedBy": "xgrandjean",
+      "contributedAt": "2026-08-12T06:04:59.764Z"
+    }
+  ]
+}
