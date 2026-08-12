@@ -29,6 +29,7 @@ function buildEntry(fileName) {
     }
 
     const row = json.root.row;
+    const meta = json.metaBibliotheque || {};
     const chapitres = (json.root.children && json.root.children.listeChapitres) || [];
     const totalQuestions = chapitres.reduce((sum, c) => {
         const questions = (c.children && c.children.listeQuestions) || [];
@@ -38,11 +39,14 @@ function buildEntry(fileName) {
     return {
         slug: fileName.replace(/\.json$/, ''),
         designation: row.designation || '',
-        matiere: row.matiere || '',
-        niveau: row.niveau || '',
-        classe: row.classe || '',
+        // Matière/niveau de classe : saisis manuellement par le contributeur (metaBibliotheque),
+        // jamais lus sur le parcours lui-même — voir validate-pr.js et README.md.
+        matiere: meta.matiere || '',
+        niveauClasse: meta.niveauClasse || '',
         theme: row.theme || '',
-        numero: row.numero || '',
+        // "Observations" du parcours : volontairement visible publiquement (voir README.md) —
+        // aide un enseignant à juger de l'intérêt du parcours avant de l'importer.
+        observation: row.commentaire || '',
         nbChapitres: chapitres.length,
         nbQuestions: totalQuestions,
         contributedBy: json.contributedBy || null,

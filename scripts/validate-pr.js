@@ -75,8 +75,23 @@ for (const file of files) {
         fail(file, 'champ "root.row.designation" manquant ou vide');
         continue;
     }
-    if (!row.matiere || !String(row.matiere).trim()) {
-        fail(file, 'champ "root.row.matiere" manquant ou vide');
+    // Seuls les parcours à l'état "Validé" (statut=2 côté XSpro) sont publiables —
+    // un brouillon n'offre aucune garantie de contenu stable.
+    if (parseInt(row.statut, 10) !== 2) {
+        fail(file, `champ "root.row.statut" = ${row.statut}, attendu 2 (Validé)`);
+        continue;
+    }
+    // La matière et le niveau de classe ne viennent PAS du parcours lui-même (matiere y
+    // est en pratique toujours vide, niveau y est une note de difficulté et non un
+    // niveau scolaire) : ils sont saisis manuellement par le contributeur au moment de
+    // publier, dans metaBibliotheque — voir README.md.
+    const meta = json.metaBibliotheque || {};
+    if (!meta.matiere || !String(meta.matiere).trim()) {
+        fail(file, 'champ "metaBibliotheque.matiere" manquant ou vide');
+        continue;
+    }
+    if (!meta.niveauClasse || !String(meta.niveauClasse).trim()) {
+        fail(file, 'champ "metaBibliotheque.niveauClasse" manquant ou vide');
         continue;
     }
     if (!json.contributedBy) {
@@ -108,7 +123,7 @@ for (const file of files) {
     }
     if (hasDangerousPattern) continue;
 
-    ok(file, `parcours "${row.designation}" (${row.matiere}) — ${chapitres.length} chapitre(s), contribué par @${json.contributedBy}`);
+    ok(file, `parcours "${row.designation}" (${meta.matiere} · ${meta.niveauClasse}) — ${chapitres.length} chapitre(s), contribué par @${json.contributedBy}`);
 }
 
 if (hasError) {

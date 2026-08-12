@@ -30,9 +30,10 @@ au moment de la publication :
   "type": "listeParcours",
   "contributedBy": "login-github-du-contributeur",
   "contributedAt": "2026-01-15T10:00:00.000Z",
+  "metaBibliotheque": { "matiere": "NSI", "niveauClasse": "Terminale" },
   "root": {
     "table": "listeParcours",
-    "row": { "designation": "...", "matiere": "...", "niveau": "...", ... },
+    "row": { "designation": "...", "statut": 2, "theme": "...", "commentaire": "...", ... },
     "children": {
       "listeChapitres": [
         { "row": {...}, "children": { "listeQuestions": [...] } }
@@ -42,9 +43,18 @@ au moment de la publication :
 }
 ```
 
-Les champs `enseignant`/`etablissement`/`commentaire` sont vidés côté
-application avant publication (vie privée) — seul `contributedBy` (pseudo
-GitHub) identifie l'auteur.
+Le bloc `metaBibliotheque` (matière + niveau de classe) est saisi manuellement
+par le contributeur au moment de la publication, indépendamment des champs du
+parcours : `matiere` y est en pratique presque toujours vide, et `niveau` y
+est une note de difficulté, pas un niveau scolaire.
+
+Les champs `enseignant`/`etablissement` sont vidés côté application avant
+publication (vie privée) — seul `contributedBy` (pseudo GitHub) identifie
+l'auteur. En revanche `root.row.commentaire` (les « Observations » du
+parcours) reste **volontairement public** : c'est une description de
+contenu qui aide un autre enseignant à juger de l'intérêt du parcours avant
+de l'importer (affiché sur les cartes de l'onglet « Parcourir »). Seuls les
+parcours à l'état Validé (`root.row.statut === 2`) sont acceptés.
 
 ## Mise en place (à faire une seule fois, par l'éditeur XSpro)
 
