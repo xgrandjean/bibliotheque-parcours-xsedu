@@ -1,0 +1,397 @@
+{
+  "xsproHierarchicalExport": true,
+  "version": 1,
+  "type": "listeParcours",
+  "exportedAt": "2026-08-12T06:04:53.261Z",
+  "root": {
+    "table": "listeParcours",
+    "row": {
+      "idParcours": "_1779807435947",
+      "iconeInfo": "valide",
+      "idLigne": 3,
+      "matiere": "",
+      "niveau": "1.0",
+      "classe": "Général",
+      "anneeScolaire": "",
+      "designation": "Exemple de parcours",
+      "statut": 2,
+      "commentaire": "Exemple de formulaire avec tous les types de questions",
+      "JSONcontextParametresParcours": "",
+      "numero": "P100",
+      "selection": 0,
+      "theme": "Exemple"
+    },
+    "children": {
+      "listeChapitres": [
+        {
+          "table": "listeChapitres",
+          "row": {
+            "idChapitre": "_1779826730874",
+            "idParcours": "_1779807435947",
+            "selection": 0,
+            "idLigne": 1,
+            "numero": 1,
+            "titre": "Le cheval blanc",
+            "description": "Exemple de questionnaire",
+            "objectifs": "Explorer les différentes possiilités de questions",
+            "dureeEstimee": "30 min",
+            "statut": 2,
+            "iconeInfoCompl": "valide",
+            "mode": 3
+          },
+          "children": {
+            "listeQuestions": [
+              {
+                "table": "listeQuestions",
+                "row": {
+                  "idQuestion": "_1779826751162",
+                  "idChapitre": "_1779826730874",
+                  "idLigne": 1,
+                  "selection": 0,
+                  "iconeInfo": "cours",
+                  "type": 5,
+                  "contenu": "# Le cheval blanc — Ce que tout le monde croit savoir (mais non)\n\n---\n\n## 1. Qu'est-ce qu'un cheval blanc ?\n\nUn cheval blanc est un cheval.\n\nBlanc.\n\nVoilà. Cours terminé.\n\n...\n\nNon, soyons sérieux.\n\n---\n\n## 2. La couleur\n\nUn cheval blanc a le pelage blanc.\n\nMais attention : un cheval blanc de nuit reste blanc.\nLa nuit ne change pas la couleur du cheval.\n(C'est une question piège classique. Vous êtes prévenus.)\n\n---\n\n## 3. La classification scientifique\n\nLe cheval appartient à la famille des **équidés**.\n\nLes équidés sont des mammifères herbivores aux sabots.\n\nLa famille comprend notamment :\n- Le cheval (Equus caballus)\n- L'âne (Equus asinus)\n- Le zèbre (Equus zebra)\n\nUn cheval blanc n'est donc pas un zèbre raté.\n\n---\n\n## 4. Le cheval blanc dans l'Histoire\n\nLe cheval blanc est célèbre depuis l'Antiquité.\n\nExemple bien connu :\n- Henri IV avait un cheval blanc\n- Napoléon aussi\n- Et beaucoup d'autres\n\nC'est en effet la couleur traditionnelle des chevaux de parade.\n\n---\n\n## 5. À retenir\n\n| Caractéristique | Valeur |\n|---|---|\n| Couleur du pelage | Blanc |\n| Famille | Équidés |\n| Régime alimentaire | Herbivore |\n| Nombre de pattes | 4 |\n| Couleur la nuit | Toujours blanc |",
+                  "regle": 1,
+                  "correction": 1,
+                  "points": "",
+                  "choix": "",
+                  "ordre_choix": "",
+                  "choixCorrect": "",
+                  "indication": "",
+                  "masque": null,
+                  "explicationCorrection": null,
+                  "consigneIA": null,
+                  "ordreQuestion": null
+                },
+                "children": {}
+              },
+              {
+                "table": "listeQuestions",
+                "row": {
+                  "idQuestion": "_1779826751163",
+                  "idChapitre": "_1779826730874",
+                  "idLigne": 2,
+                  "selection": 0,
+                  "iconeInfo": "cours",
+                  "type": 5,
+                  "contenu": "Vous avez lu le cours. Bravo. Maintenant prouvez-le.",
+                  "regle": 0,
+                  "correction": "",
+                  "points": "",
+                  "choix": "",
+                  "ordre_choix": "",
+                  "choixCorrect": "",
+                  "indication": "",
+                  "masque": null,
+                  "explicationCorrection": null,
+                  "consigneIA": null,
+                  "ordreQuestion": null
+                },
+                "children": {}
+              },
+              {
+                "table": "listeQuestions",
+                "row": {
+                  "idQuestion": "_1779826751164",
+                  "idChapitre": "_1779826730874",
+                  "idLigne": 3,
+                  "selection": 0,
+                  "iconeInfo": "qcm",
+                  "type": 1,
+                  "contenu": "Quelle est la couleur d'un cheval blanc quand il fait nuit noire ?",
+                  "regle": 2,
+                  "correction": 1,
+                  "points": 1,
+                  "choix": "Noir, il fait nuit\nBlanc, c'est son pelage\nGris, une moyenne\nTransparent, on ne sait pas",
+                  "ordre_choix": 1,
+                  "choixCorrect": "Blanc, c'est son pelage",
+                  "indication": "La nuit change l'éclairage, pas la couleur du cheval.",
+                  "masque": null,
+                  "explicationCorrection": null,
+                  "consigneIA": null,
+                  "ordreQuestion": null
+                },
+                "children": {}
+              },
+              {
+                "table": "listeQuestions",
+                "row": {
+                  "idQuestion": "_1779826751165",
+                  "idChapitre": "_1779826730874",
+                  "idLigne": 4,
+                  "selection": 0,
+                  "iconeInfo": "qcm",
+                  "type": 1,
+                  "contenu": "À quelle famille animale appartient le cheval blanc ?",
+                  "regle": 2,
+                  "correction": 1,
+                  "points": 1,
+                  "choix": "Les félidés\nLes équidés\nLes bovidés\nLes zébridés",
+                  "ordre_choix": 1,
+                  "choixCorrect": "Les équidés",
+                  "indication": "Les zébridés n'existent pas. On a essayé de vous piéger.",
+                  "masque": null,
+                  "explicationCorrection": null,
+                  "consigneIA": null,
+                  "ordreQuestion": null
+                },
+                "children": {}
+              },
+              {
+                "table": "listeQuestions",
+                "row": {
+                  "idQuestion": "_1779826751166",
+                  "idChapitre": "_1779826730874",
+                  "idLigne": 5,
+                  "selection": 0,
+                  "iconeInfo": "qcm",
+                  "type": 1,
+                  "contenu": "Parmi les animaux suivants, lesquels sont des équidés ? (plusieurs réponses possibles)",
+                  "regle": 3,
+                  "correction": 1,
+                  "points": 1,
+                  "choix": "Le cheval\nL'âne\nLe zèbre\nLe lion\nLe cochon",
+                  "ordre_choix": 1,
+                  "choixCorrect": "Le cheval\nL'âne\nLe zèbre",
+                  "indication": "Le lion et le cochon remercient pour la promotion, mais non.",
+                  "masque": null,
+                  "explicationCorrection": null,
+                  "consigneIA": null,
+                  "ordreQuestion": null
+                },
+                "children": {}
+              },
+              {
+                "table": "listeQuestions",
+                "row": {
+                  "idQuestion": "_1779826751167",
+                  "idChapitre": "_1779826730874",
+                  "idLigne": 6,
+                  "selection": 0,
+                  "iconeInfo": "qcm",
+                  "type": 1,
+                  "contenu": "Un cheval blanc est un zèbre qui a perdu ses rayures.",
+                  "regle": 2,
+                  "correction": 1,
+                  "points": 1,
+                  "choix": "Vrai\nFaux",
+                  "ordre_choix": 2,
+                  "choixCorrect": "Faux",
+                  "indication": "Ce sont deux espèces différentes. Le zèbre n'a pas perdu ses rayures, il les assume.",
+                  "masque": null,
+                  "explicationCorrection": null,
+                  "consigneIA": null,
+                  "ordreQuestion": null
+                },
+                "children": {}
+              },
+              {
+                "table": "listeQuestions",
+                "row": {
+                  "idQuestion": "_1779826751168",
+                  "idChapitre": "_1779826730874",
+                  "idLigne": 7,
+                  "selection": 0,
+                  "iconeInfo": "texte_court",
+                  "type": 2,
+                  "contenu": "Donnez le nom de la famille animale à laquelle appartient le cheval.",
+                  "regle": 4,
+                  "correction": 3,
+                  "points": 1,
+                  "choix": "",
+                  "ordre_choix": "",
+                  "choixCorrect": "équidé",
+                  "indication": "Pensez au cours, section 3.",
+                  "masque": null,
+                  "explicationCorrection": null,
+                  "consigneIA": null,
+                  "ordreQuestion": null
+                },
+                "children": {}
+              },
+              {
+                "table": "listeQuestions",
+                "row": {
+                  "idQuestion": "_1779826751169",
+                  "idChapitre": "_1779826730874",
+                  "idLigne": 8,
+                  "selection": 0,
+                  "iconeInfo": "texte_court",
+                  "type": 2,
+                  "contenu": "Combien de pattes possède un cheval blanc en bonne santé ?",
+                  "regle": 6,
+                  "correction": 1,
+                  "points": 1,
+                  "choix": "",
+                  "ordre_choix": "",
+                  "choixCorrect": "4",
+                  "indication": "Si vous hésitez entre 3 et 5, relisez le cours.",
+                  "masque": null,
+                  "explicationCorrection": null,
+                  "consigneIA": null,
+                  "ordreQuestion": null
+                },
+                "children": {}
+              },
+              {
+                "table": "listeQuestions",
+                "row": {
+                  "idQuestion": "_1779826751170",
+                  "idChapitre": "_1779826730874",
+                  "idLigne": 9,
+                  "selection": 0,
+                  "iconeInfo": "texte_court",
+                  "type": 2,
+                  "contenu": "Quel est le régime alimentaire du cheval blanc ?",
+                  "regle": 4,
+                  "correction": 3,
+                  "points": 1,
+                  "choix": "",
+                  "ordre_choix": "",
+                  "choixCorrect": "Végétarien",
+                  "indication": "Il ne mange pas de pizza.",
+                  "masque": null,
+                  "explicationCorrection": null,
+                  "consigneIA": null,
+                  "ordreQuestion": null
+                },
+                "children": {}
+              },
+              {
+                "table": "listeQuestions",
+                "row": {
+                  "idQuestion": "_1779826751171",
+                  "idChapitre": "_1779826730874",
+                  "idLigne": 10,
+                  "selection": 0,
+                  "iconeInfo": "texte_court",
+                  "type": 2,
+                  "contenu": "Combien d'espèces d'équidés sont citées dans le cours ?",
+                  "regle": 6,
+                  "correction": 2,
+                  "points": 1,
+                  "choix": "",
+                  "ordre_choix": "",
+                  "choixCorrect": "",
+                  "indication": "Relisez la section 3, comptez sur vos doigts si besoin.",
+                  "masque": null,
+                  "explicationCorrection": null,
+                  "consigneIA": null,
+                  "ordreQuestion": null
+                },
+                "children": {}
+              },
+              {
+                "table": "listeQuestions",
+                "row": {
+                  "idQuestion": "_1779826751172",
+                  "idChapitre": "_1779826730874",
+                  "idLigne": 11,
+                  "selection": 0,
+                  "iconeInfo": "texte_long",
+                  "type": 3,
+                  "contenu": "Expliquez en quelques phrases pourquoi le cheval blanc est blanc la nuit. Développez votre raisonnement avec rigueur scientifique (et un peu d'humour si possible).",
+                  "regle": 4,
+                  "correction": 2,
+                  "points": 1,
+                  "choix": "",
+                  "ordre_choix": "",
+                  "choixCorrect": "",
+                  "indication": "",
+                  "masque": null,
+                  "explicationCorrection": null,
+                  "consigneIA": null,
+                  "ordreQuestion": null
+                },
+                "children": {}
+              },
+              {
+                "table": "listeQuestions",
+                "row": {
+                  "idQuestion": "_1779826751173",
+                  "idChapitre": "_1779826730874",
+                  "idLigne": 12,
+                  "selection": 0,
+                  "iconeInfo": "texte_long",
+                  "type": 3,
+                  "contenu": "Citez au moins trois membres de la famille des équidés et précisez leur particularité visuelle principale.",
+                  "regle": 5,
+                  "correction": 3,
+                  "points": 1,
+                  "choix": "",
+                  "ordre_choix": "",
+                  "choixCorrect": "",
+                  "indication": "Un indice : l'un d'eux est rayé.",
+                  "masque": null,
+                  "explicationCorrection": null,
+                  "consigneIA": null,
+                  "ordreQuestion": null
+                },
+                "children": {}
+              },
+              {
+                "table": "listeQuestions",
+                "row": {
+                  "idQuestion": "_1779826751174",
+                  "idChapitre": "_1779826730874",
+                  "idLigne": 13,
+                  "selection": 0,
+                  "iconeInfo": "liste",
+                  "type": 4,
+                  "contenu": "Trouvez l'intrus",
+                  "regle": 2,
+                  "correction": 1,
+                  "points": 1,
+                  "choix": "Cheval blanc\nZèbre\nLion\nÂne",
+                  "ordre_choix": 2,
+                  "choixCorrect": "Lion",
+                  "indication": "",
+                  "masque": null,
+                  "explicationCorrection": null,
+                  "consigneIA": null,
+                  "ordreQuestion": null
+                },
+                "children": {}
+              },
+              {
+                "table": "listeQuestions",
+                "row": {
+                  "idQuestion": "_1779826751175",
+                  "idChapitre": "_1779826730874",
+                  "idLigne": 14,
+                  "selection": 0,
+                  "iconeInfo": "liste",
+                  "type": 4,
+                  "contenu": "Parmi ces propositions, qu'est-ce qui caractérise le zèbre ?",
+                  "regle": 2,
+                  "correction": 1,
+                  "points": 1,
+                  "choix": "Pelage entièrement blanc\nRayures noires et blanches\nLongues oreilles",
+                  "ordre_choix": 1,
+                  "choixCorrect": "Rayures noires et blanches",
+                  "indication": "L'âne n'est pas blanc (en général). Sauf si c'est un âne blanc.",
+                  "masque": null,
+                  "explicationCorrection": null,
+                  "consigneIA": null,
+                  "ordreQuestion": null
+                },
+                "children": {}
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "metaBibliotheque": {
+    "matieres": [
+      "NSI",
+      "Maths"
+    ],
+    "niveauxClasse": [
+      "Terminale"
+    ]
+  },
+  "contributedBy": "xgrandjean",
+  "contributedAt": "2026-08-12T06:04:59.764Z"
+}
