@@ -81,17 +81,20 @@ for (const file of files) {
         fail(file, `champ "root.row.statut" = ${row.statut}, attendu 2 (Validé)`);
         continue;
     }
-    // La matière et le niveau de classe ne viennent PAS du parcours lui-même (matiere y
-    // est en pratique toujours vide, niveau y est une note de difficulté et non un
-    // niveau scolaire) : ils sont saisis manuellement par le contributeur au moment de
-    // publier, dans metaBibliotheque — voir README.md.
+    // La/les matière(s) et niveau(x) de classe ne viennent PAS du parcours lui-même
+    // (matiere y est en pratique toujours vide, niveau y est une note de difficulté et
+    // non un niveau scolaire) : ils sont saisis manuellement par le contributeur au
+    // moment de publier, dans metaBibliotheque — un parcours peut en avoir plusieurs
+    // (tableaux) — voir README.md.
     const meta = json.metaBibliotheque || {};
-    if (!meta.matiere || !String(meta.matiere).trim()) {
-        fail(file, 'champ "metaBibliotheque.matiere" manquant ou vide');
+    const matieresValides = Array.isArray(meta.matieres) && meta.matieres.some(m => m && String(m).trim());
+    if (!matieresValides) {
+        fail(file, 'champ "metaBibliotheque.matieres" manquant, vide, ou sans valeur non vide');
         continue;
     }
-    if (!meta.niveauClasse || !String(meta.niveauClasse).trim()) {
-        fail(file, 'champ "metaBibliotheque.niveauClasse" manquant ou vide');
+    const niveauxValides = Array.isArray(meta.niveauxClasse) && meta.niveauxClasse.some(n => n && String(n).trim());
+    if (!niveauxValides) {
+        fail(file, 'champ "metaBibliotheque.niveauxClasse" manquant, vide, ou sans valeur non vide');
         continue;
     }
     if (!json.contributedBy) {
@@ -123,7 +126,7 @@ for (const file of files) {
     }
     if (hasDangerousPattern) continue;
 
-    ok(file, `parcours "${row.designation}" (${meta.matiere} · ${meta.niveauClasse}) — ${chapitres.length} chapitre(s), contribué par @${json.contributedBy}`);
+    ok(file, `parcours "${row.designation}" (${meta.matieres.join(', ')} · ${meta.niveauxClasse.join(', ')}) — ${chapitres.length} chapitre(s), contribué par @${json.contributedBy}`);
 }
 
 if (hasError) {

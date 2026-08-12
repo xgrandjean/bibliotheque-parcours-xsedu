@@ -39,10 +39,11 @@ function buildEntry(fileName) {
     return {
         slug: fileName.replace(/\.json$/, ''),
         designation: row.designation || '',
-        // Matière/niveau de classe : saisis manuellement par le contributeur (metaBibliotheque),
-        // jamais lus sur le parcours lui-même — voir validate-pr.js et README.md.
-        matiere: meta.matiere || '',
-        niveauClasse: meta.niveauClasse || '',
+        // Matière(s)/niveau(x) de classe : saisis manuellement par le contributeur
+        // (metaBibliotheque, tableaux — un parcours peut en avoir plusieurs), jamais lus
+        // sur le parcours lui-même — voir validate-pr.js et README.md.
+        matieres: Array.isArray(meta.matieres) ? meta.matieres.filter(Boolean) : [],
+        niveauxClasse: Array.isArray(meta.niveauxClasse) ? meta.niveauxClasse.filter(Boolean) : [],
         theme: row.theme || '',
         // "Observations" du parcours : volontairement visible publiquement (voir README.md) —
         // aide un enseignant à juger de l'intérêt du parcours avant de l'importer.

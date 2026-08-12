@@ -30,7 +30,7 @@ au moment de la publication :
   "type": "listeParcours",
   "contributedBy": "login-github-du-contributeur",
   "contributedAt": "2026-01-15T10:00:00.000Z",
-  "metaBibliotheque": { "matiere": "NSI", "niveauClasse": "Terminale" },
+  "metaBibliotheque": { "matieres": ["NSI", "Mathématiques"], "niveauxClasse": ["Première", "Terminale"] },
   "root": {
     "table": "listeParcours",
     "row": { "designation": "...", "statut": 2, "theme": "...", "commentaire": "...", ... },
@@ -43,10 +43,12 @@ au moment de la publication :
 }
 ```
 
-Le bloc `metaBibliotheque` (matière + niveau de classe) est saisi manuellement
-par le contributeur au moment de la publication, indépendamment des champs du
-parcours : `matiere` y est en pratique presque toujours vide, et `niveau` y
-est une note de difficulté, pas un niveau scolaire.
+Le bloc `metaBibliotheque` (une ou plusieurs matières / niveaux de classe) est
+saisi manuellement par le contributeur au moment de la publication,
+indépendamment des champs du parcours : `root.row.matiere` y est en pratique
+presque toujours vide, et `root.row.niveau` y est une note de difficulté, pas
+un niveau scolaire. Un parcours interdisciplinaire ou utilisable à plusieurs
+niveaux peut avoir plusieurs valeurs dans `matieres`/`niveauxClasse`.
 
 Les champs `enseignant`/`etablissement` sont vidés côté application avant
 publication (vie privée) — seul `contributedBy` (pseudo GitHub) identifie
